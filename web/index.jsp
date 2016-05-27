@@ -12,5 +12,12 @@
   </head>
   <body>
   $END$
+
+  <form action="Employees" method="post" >
+
+    <br>
+    <input type="submit" value="List">
+  </form>
+
   </body>
 </html>
