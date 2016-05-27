@@ -22,11 +22,13 @@ public class EmployeesServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
         try {
-
+            pw.println( "hhhh" );
             int employee_id = Integer.parseInt(request.getParameter("employee_id"));
             String first_name = request.getParameter("first_name");
             String last_name = request.getParameter("last_name");
             String email = request.getParameter("email");
+            pw.println( "1111" );
+
             String phone_number = request.getParameter("phone_number");
             String hire_date = request.getParameter("hire_date");
             String job_id = request.getParameter("job_id");
@@ -35,7 +37,7 @@ public class EmployeesServlet extends HttpServlet {
             int manager_id = Integer.parseInt(request.getParameter("manager_id"));
             int department_id = Integer.parseInt(request.getParameter("department_id"));
 
-
+            pw.println( "xxxx" );
             Connection con = ConnectionPool();
 
             PreparedStatement pst = (PreparedStatement)
@@ -74,7 +76,7 @@ public class EmployeesServlet extends HttpServlet {
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
-        pw.println( "<p>Hola</p>" );
+
         try {
         Connection con = ConnectionPool();
         Statement stmt = con.createStatement();
